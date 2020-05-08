@@ -285,7 +285,7 @@ class _TimePickerWidgetState extends State<TimePickerWidget> {
 
   /// change the selection of minute picker
   void _changeMinuteSelection(int index) {
-    int value = _minuteDivider + (index * _minuteRange.first);
+    int value = _minuteRange.last + (index * _minuteDivider);
     if (_currMinute != value) {
       _currMinute = value;
       _changeTimeRange();
